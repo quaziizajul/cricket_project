@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="display-3">Cricket Teams</h1>
+{% if team_list %}
+    <ul>
+    {% for team in team_list %}
+        <li><a href="/cricket/get-team/{{team.teamId}}"><img src="{{team.logoURL}}" width="30px" height="30px" alt="{{team.logoURL}}" class="img-thumbnail">  {{ team.teamName }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Teams are available.</p>
+{% endif %}
+{% endblock content %}

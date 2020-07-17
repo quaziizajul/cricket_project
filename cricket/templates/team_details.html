@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="display-5">Players Of {{team.teamName}}</h1>
+{% if players %}
+    <ul>
+    {% for player in players %}
+        <li><img src="{{player.imageURL}}" width="40px" height="40px" alt="{{player.imageURL}}" class="img-thumbnail">  {{ player.getFullName }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Teams are available.</p>
+{% endif %}
+{% endblock content %}

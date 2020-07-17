@@ -1,0 +1,25 @@
+2020-07-17 10:22:10,493 - cricket_logger - ERROR - There was an exception in  create_points_table_data
+Traceback (most recent call last):
+  File "C:\Users\556098\Desktop\USTech\cricket_project\utils\ErrorLogger.py", line 34, in wrapper
+    return function(*args, **kwargs)
+  File "C:\Users\556098\Desktop\USTech\cricket_project\cricket\views.py", line 75, in create_points_table_data
+    a= 7/0
+ZeroDivisionError: integer division or modulo by zero
+2020-07-17 16:15:37,572 - cricket_logger - ERROR - exception occoured in http://127.0.0.1:81/cricket/points-table/ errror: 
+
+ZeroDivisionError('integer division or modulo by zero',)
+
+````traceback:
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\556098\Desktop\USTech\cricket_project\cricket\views.py", line 66, in pointsTable
+    a= 5/0
+ZeroDivisionError: integer division or modulo by zero
+````
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\556098\Desktop\USTech\cricket_project\cricket\views.py", line 66, in pointsTable
+    a= 5/0
+ZeroDivisionError: integer division or modulo by zero

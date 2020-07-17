@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="display-5">FIXTURES </h1>
+<div class="container">
+	<div class="row">
+		<div class="span5">
+            <table class="table table-striped table-condensed">
+                  <thead>
+                  <tr>
+                      <th>Teams</th>
+                      <th>Match Date</th>   
+                      <th>Place</th>                                       
+                  </tr>
+              </thead>   
+              <tbody>
+                {% if fixture_data %}                
+                {% for match in fixture_data %}
+                <tr></tr>
+                    <td>{{match.team}}</td>
+                    <td>{{match.match_date}}</td>
+                    <td>{{match.place}}</td>
+                </tr>
+                {% endfor %}                
+                {% else %}
+                <tr>
+                    <td>No Matches found</td>                                                                        
+                </tr> 
+                {% endif %}
+                                                               
+              </tbody>
+            </table>
+            </div>
+	</div>
+</div>
+{% endblock content %}
